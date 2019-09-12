@@ -12,12 +12,8 @@ KREWES = {
 'Kevin', 'Jude', 'Sophie', 'Henry', 'Coby', 'Manfred', 'Leia', 'Ahmed', 'Winston']
 }
 
-num = random.randint(0,3)
-if num == 0:
-    key = 'orpheus'
-elif num == 1:
-    key = 'rex'
-else:
-    key = 'endymion'
+#get the team name that the user wants 
+key = input("Enter a team name (orpheus, rex, or endymion): ") 
 
+#print out the random student name
 print(random.choice(KREWES[key]))
