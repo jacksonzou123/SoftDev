@@ -8,7 +8,7 @@ def hello_world():
 
 @app.route("/yo")
 def yo():
-    print(__name__)
+    print("haha") #prints out in terminal when page is run, returns __main__ when it is __name__
     return "Yo hablo queso!"
 
 @app.route("/bleh")
