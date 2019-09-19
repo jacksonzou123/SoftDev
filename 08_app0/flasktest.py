@@ -18,8 +18,8 @@ def bleh():
 
 @app.route("/num")
 def num():
-    print(__name__)
-    return "num"
+    ##print(__name__)
+    return "num" #return type must be string
 
 if __name__ == "__main__":
     app.debug = True
