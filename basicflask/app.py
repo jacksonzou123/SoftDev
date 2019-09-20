@@ -1,3 +1,8 @@
+# Jackson Zou
+# SoftDev1 pd9
+# Basic Flask Stuff
+# 2019-09-19
+
 from flask import Flask, render_template
 app = Flask(__name__)
 
