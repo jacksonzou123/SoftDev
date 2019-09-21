@@ -2,6 +2,7 @@ from flask import Flask, render_template
 import random
 app = Flask(__name__)
 
+coll = {}
 def get_job():
     file = open("data/occupations.csv", 'r')
     words = file.readlines()
@@ -37,6 +38,7 @@ def showjob():
         'app.html',
         foo="Random Job Selection",
         item=get_job()
+        coll=collection
     )
 
 if __name__ == "__main__":

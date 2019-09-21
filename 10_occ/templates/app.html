@@ -1,12 +1,29 @@
 <!DOCTYPE html>
-<html>
+
+<!--
+     html template file
+     Jackson Zou
+     SoftDev1 pd09
+     K10 -- Flask with occupations
+     2019-09-20
+-->
+
+<html lang="en">
   <head>
-    <title> {{ foo }} </title>
+    <meta charset="utf-8"/>
+    <title>
+      {{ foo }}
+	  </title>
   </head>
   <body>
-    "This is your randomly selected job:"
+    "This is your job:"
     <br>
-    {{ item }}
+    {{ job }}
     <br>
+    <br>
+    {% for item in collection %}
+      {{ item }}
+      <br>
+    {% endfor &}
   </body>
 </html>
