@@ -5,8 +5,8 @@ app = Flask(__name__)
 def home():
     return "Hi, this is the homepage"
 
-@app.route("/occupyflaskst")
-def template():
+@app.route("/getjob")
+def getjob():
     return render_template(
         'app.html',
         foo="fooooo",
