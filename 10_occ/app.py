@@ -19,6 +19,7 @@ def get_job():
             if each[look] == ',': #look for the last comma in each line
                 job = each[0:look]
                 percent = float(each[look+1:])
+                coll[job] = percent
                 look = -1
             look -= 1
         while percent > 0:
@@ -37,8 +38,8 @@ def showjob():
     return render_template(
         'app.html',
         foo="Random Job Selection",
-        item=get_job()
-        coll=collection
+        job=get_job(),
+        collection=coll
     )
 
 if __name__ == "__main__":
