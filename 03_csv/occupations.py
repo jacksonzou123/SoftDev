@@ -22,9 +22,10 @@ for each in words:
             percent = float(each[look+1:])
             look = -1
         look -= 1
-    while percent > 0:
+    while percent >= 0.01:
         index += 1
         rolls[index] = job #scale everything by 10, and give each percentage point a job
         percent -= 0.1
 roll = random.randint(1,998) #print job
-print(rolls[roll])
+print(rolls)
+#print(rolls[roll])
