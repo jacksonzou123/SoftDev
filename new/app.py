@@ -13,7 +13,7 @@ def maybe():
     print(request.headers)
     print(request.method)
     print(app)
-    return "jacb sucks"
+    return request.args["jaco"]
 
 if __name__ == "__main__":
     app.debug = True
