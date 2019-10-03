@@ -23,6 +23,7 @@ def maybe():
     # print(request.args['name'])
     # print("***DIAG: request.headers ***")
     # print(request.headers)
+    print(request.cookies)
     return render_template('poo.html',
                             name = request.args['name'],
                             args = request.method)
