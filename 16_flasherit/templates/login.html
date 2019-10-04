@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+{% extends "template.html" %}
+{% block head %} | Log In{% endblock %}
+
+
+{% block content %}
+<h3>Log In</h3>
+<br>
+<form action="/auth">
+  Username
+  <input type = "text" name="name">
+  <br>
+  Password
+  <input type= "password" name="pass">
+  <br>
+  <input type = "submit" name="sub">
+</form>
+{% endblock %}
