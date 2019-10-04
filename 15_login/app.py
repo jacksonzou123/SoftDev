@@ -32,6 +32,7 @@ def authenticate():
     if "name" not in request.args or "pass" not in request.args:
         return
     current["name"] = request.args["name"]
+    current["pass"] = request.args["pass"]
     if request.args["name"] == username and request.args["pass"] == password:
         return redirect(url_for("homepage"))
     else:
@@ -47,8 +48,12 @@ def homepage():
 @app.route("/error")
 def error():
     print(current)
+    if current["name"] != username:
+        return render_template("error.html",
+                                user = current["name"])
     return render_template("error.html",
-                            user = current["name"])
+                            user = current["name"],
+                            userp = current["pass"])
 
 @app.route("/red")
 def red():
