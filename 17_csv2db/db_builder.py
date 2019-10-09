@@ -19,7 +19,7 @@ def addstudents():
     with open('students.csv', newline='') as csvfile:
         reader = csv.DictReader(csvfile)
         for row in reader:
-            c.execute("INSERT INTO students VALUES ({}, {}, {});".format("\"" + row["name"] + "\"", row["age"], row["id"]))
+            c.execute("INSERT INTO students VALUES (\"{}\", {}, {});".format(row["name"], row["age"], row["id"]))
 
     #print out the values from the table
     c.execute("SELECT * FROM students;")
@@ -43,7 +43,7 @@ def addclasses():
     with open('courses.csv', newline='') as csvfile:
         reader = csv.DictReader(csvfile)
         for row in reader:
-            c.execute("INSERT INTO courses VALUES ({}, {}, {});".format("\"" + row["code"] + "\"", row["mark"], row["id"]))
+            c.execute("INSERT INTO courses VALUES (\"{}\", {}, {});".format(row["code"], row["mark"], row["id"]))
 
     #print out the values from the table
     c.execute("SELECT * FROM courses;")
