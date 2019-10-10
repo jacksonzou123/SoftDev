@@ -7,7 +7,7 @@ import sqlite3   #enable control of an sqlite database
 import csv       #facilitate CSV I/O
 
 def addstudents():
-    DB_FILE="students.db"
+    DB_FILE="info.db"
 
     db = sqlite3.connect(DB_FILE) #open if file exists, otherwise create
     c = db.cursor()               #facilitate db ops
@@ -31,7 +31,7 @@ def addstudents():
     db.close()  #close database
 
 def addclasses():
-    DB_FILE="courses.db"
+    DB_FILE="info.db"
 
     db = sqlite3.connect(DB_FILE) #open if file exists, otherwise create
     c = db.cursor()               #facilitate db ops
