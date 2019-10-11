@@ -7,7 +7,7 @@ import sqlite3   #enable control of an sqlite database
 import csv       #facilitate CSV I/O
 
 
-DB_FILE="discobandit.db"
+DB_FILE="info.db"
 
 db = sqlite3.connect(DB_FILE) #open if file exists, otherwise create
 c = db.cursor()               #facilitate db ops
@@ -16,9 +16,12 @@ c = db.cursor()               #facilitate db ops
 
 # < < < INSERT YOUR POPULATE-THE-DB CODE HERE > > >
 
-
-command = ""          # test SQL stmt in sqlite3 shell, save as string
+command = "CREATE TABLE stu_avg (name STRING, id INTEGER PRIMARY KEY, average REAL);"
 c.execute(command)    # run SQL statement
+command = "SELECT name, students.id, mark FROM students, courses WHERE students.id = courses.id"
+c.execute(command)
+info = c.fetchall()
+print(info)
 
 #==========================================================
 
