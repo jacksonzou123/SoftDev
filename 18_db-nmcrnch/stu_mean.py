@@ -21,9 +21,6 @@ c = db.cursor()               #facilitate db ops
 command = "SELECT name, students.id, mark FROM students, courses WHERE students.id = courses.id"
 c.execute(command)
 info = c.fetchall() #Get all the names, ids, and marks from students and courses tables
-print(info)
-command = "CREATE TABLE stu_avg(name TEXT, id INTEGER PRIMARY KEY, average REAL);"
-c.execute(command) #create new table
 
 id = 0
 sum = 0
@@ -50,6 +47,10 @@ print("Student name: {}, ID: {}, Average: {}".format(info[len(info)-1][0], id, s
 command = "SELECT * FROM stu_avg"
 c.execute(command)
 final = c.fetchall()
+
+# with open('courses.csv', 'a+') as csvfile:
+#     csvfile.write('Calc,25,3\n')
+
 #==========================================================
 
 db.commit() #save changes
