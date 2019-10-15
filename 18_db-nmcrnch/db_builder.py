@@ -1,7 +1,7 @@
-#Jackson Zou and Jeff Lin
+#Jackson Zou 
 #SoftDev pd9
-#K17 -- No Trouble
-#10-10-2019
+#K18 -- Average
+#10-14-2019
 
 import sqlite3   #enable control of an sqlite database
 import csv       #facilitate CSV I/O
