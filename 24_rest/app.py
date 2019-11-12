@@ -12,8 +12,10 @@ def hello_world():
     u = urllib.request.urlopen("https://api.nasa.gov/planetary/apod?api_key=BAl9laaYBAEonY1OkUnpudItqDCgg4xxoIYVy1eU")
     response = u.read()
     data = json.loads(response)
+    print(data)
     return render_template("index.html",
-                            pic = data["url"])
+                            pic = data["url"],
+                            desc = data["explanation"])
 
 if __name__ == "__main__":
     app.debug = True
