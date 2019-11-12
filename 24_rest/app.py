@@ -4,12 +4,12 @@
 #
 
 from flask import Flask, render_template, request, redirect, url_for
-import urllib.request as urllib2, json
+import urllib.request, json
 app = Flask(__name__)
 
 @app.route("/")
 def hello_world():
-    u = urllib2.urlopen("https://api.nasa.gov/planetary/apod?api_key=BAl9laaYBAEonY1OkUnpudItqDCgg4xxoIYVy1eU")
+    u = urllib.request.urlopen("https://api.nasa.gov/planetary/apod?api_key=BAl9laaYBAEonY1OkUnpudItqDCgg4xxoIYVy1eU")
     response = u.read()
     data = json.loads(response)
     return render_template("index.html",
