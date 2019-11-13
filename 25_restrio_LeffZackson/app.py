@@ -22,7 +22,8 @@ def metaweather():
                             place = data['title'],
                             latt_long = data['latt_long'],
                             applicable_date = weather['applicable_date'],
-                            weather_state_name = weather['weather_state_name'])
+                            weather_state_name = weather['weather_state_name'],
+                            image = "https://www.metaweather.com/static/img/weather/png/64/{}.png".format(weather['weather_state_abbr']))
 
 if __name__ == "__main__":
     app.debug = True
