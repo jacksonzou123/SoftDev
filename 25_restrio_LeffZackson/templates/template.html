@@ -2,13 +2,19 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title>API Intro {% block head %}{% endblock %}</title>
+    <title>API Intro{% block head %}{% endblock %}</title>
+    <style>
+      td { text-align: center; }
+    </style>
   </head>
   <body>
+    <center>
       {% block content %}
       {% endblock %}
 
       <br><br><br>
-      <footer>Made by Jackson Zou </footer>
+      <a href="{{ url_for('root') }}">Home</a><br><br>
+      <footer>Made by Jackson Zou (you're whack -Jeff)</footer>
+    </center>
   </body>
 </html>
