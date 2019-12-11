@@ -38,4 +38,7 @@ var gcd = function(a, b) {
 }
 
 var randomStudent = function() {
+  return studentList[Math.floor(Math.random()*studentList.length)];
 }
+
+var studentList = ["jegg", "jackson", "derek", "bleek", "bop", "water"];
