@@ -55,8 +55,6 @@ var studentList = ["jegg", "jackson", "derek", "bleek", "bop", "water"];
 var getrandStudent = document.getElementById("randstudent");
 getrandStudent.addEventListener('click', randomStudent);
 
-var fibinput = document.getElementById("fibinput");
-console.log(fibinput);
 var getfib = document.getElementById("fib");
 getfib.addEventListener('click', function() {fibonacci(20)});
 
