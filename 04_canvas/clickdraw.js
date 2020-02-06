@@ -1,9 +1,14 @@
+/*
+Jackson Zou and David Wang
+SoftDev2 pd9
+K4 -- I SEE A RED DOOR
+2020-02-05
+*/
+
 var mode = 0 //rect mode
 var c = document.getElementById("slate");
 var ctx = c.getContext("2d");
 c.addEventListener('click', function(e) {drawShape(e)});
-
-ctx.fillRect(100,100,100,200);
 
 var clearB = document.getElementById("clear");
 clearB.addEventListener('click', clearCanvas);
