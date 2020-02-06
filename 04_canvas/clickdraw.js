@@ -44,7 +44,10 @@ function drawShape(e) {
   }
   else {
     console.log("dab");
-    ctx.fillRect(xPos, yPos, 5, 5);
+    //ctx.fillRect(xPos, yPos, 5, 5);
+    ctx.beginPath();
+    ctx.arc(xPos, yPos, 1, 0, 2*Math.PI);
+    ctx.fill();
   }
   console.log("Drew smth");
 }
