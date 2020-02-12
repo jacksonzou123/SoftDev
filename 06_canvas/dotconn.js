@@ -28,6 +28,7 @@ function drawNextDot(e) {
     ctx.lineTo(e.offsetX, e.offsetY);
   }
   ctx.arc(e.offsetX, e.offsetY, 3, 0, 2 * Math.PI);
+  ctx.stroke();
   ctx.fill();
   xcor = e.offsetX;
   ycor = e.offsetY;
