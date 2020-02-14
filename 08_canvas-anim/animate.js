@@ -27,9 +27,8 @@ function startAnimation(num) {
       radius = 1;
       change = 1;
     }
-    if (mode == 0) {
-
-    }
+    x = Math.floor( Math.random() * (c.width-100) );
+    y = Math.floor( Math.random() * (c.height-70) );
     console.log(num);
     mode = num;
     window.cancelAnimationFrame(animation);
