@@ -18,17 +18,32 @@ def add_to_db( col , file ):
 	col.insert(final)
 	print("info gotten")
 
+def printPlayer( item ):
+	final = ""
+	final += "Name: " + item['first_name'] + " " + item['last_name'] + " Team: " + item["team"]["full_name"]
+	print(final)
+
 def getPlayerName( name, col ):
-	pass
+	final = col.find({"first_name": name})
+	for item in final:
+		printPlayer( item )
 
 def getTeamName( name, col ):
-	pass
+	final = col.find({"team.name": name})
+	for item in final:
+		printPlayer( item )
 
 def getConference( conference, col ):
-	pass
+	final = col.find({"team.conference": conference})
+	for item in final:
+		printPlayer( item )
 
 def getDivision( division, col ):
-	pass
+	final = col.find({"team.division": division})
+	for item in final:
+		printPlayer( item )
 
 def getPosition( position, col ):
-	pass
+	final = col.find({"position": position})
+	for item in final:
+		printPlayer ( item )
