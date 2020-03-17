@@ -20,30 +20,40 @@ def add_to_db( col , file ):
 
 def printPlayer( item ):
 	final = ""
-	final += "Name: " + item['first_name'] + " " + item['last_name'] + " Team: " + item["team"]["full_name"]
-	print(final)
+	final += "Name: " + item['first_name'] + " " + item['last_name'] + " Team: " + item["team"]["full_name"] + "\n"
+	return final
 
 def getPlayerName( name, col ):
-	final = col.find({"first_name": name})
-	for item in final:
-		printPlayer( item )
+	final = []
+	items = col.find({"first_name": name})
+	for item in items:
+		final.append(printPlayer( item ))
+	return final
 
 def getTeamName( name, col ):
-	final = col.find({"team.name": name})
-	for item in final:
-		printPlayer( item )
+	final = []
+	items = col.find({"team.name": name})
+	for item in items:
+		final.append(printPlayer( item ))
+	return final
 
 def getConference( conference, col ):
-	final = col.find({"team.conference": conference})
-	for item in final:
-		printPlayer( item )
+	final = []
+	items = col.find({"team.conference": conference})
+	for item in items:
+		final.append(printPlayer( item ))
+	return final
 
 def getDivision( division, col ):
-	final = col.find({"team.division": division})
-	for item in final:
-		printPlayer( item )
+	final = []
+	items = col.find({"team.division": division})
+	for item in items:
+		final.append(printPlayer( item ))
+	return final
 
 def getPosition( position, col ):
-	final = col.find({"position": position})
-	for item in final:
-		printPlayer ( item )
+	final = []
+	items = col.find({"position": position})
+	for item in items:
+		final.append(printPlayer ( item ))
+	return final

@@ -37,6 +37,23 @@ if col.count() == 0:
 def home():
 	return render_template("home.html")
 
+@app.route('/answer', methods=['POST', 'GET'])
+def answer():
+	print(request.args)
+	final = ""
+	if request.args['type'] == 'playername':
+		final = getPlayerName(request.args['info'], col)
+	if request.args['type'] == 'teamname':
+		final = getTeamName(request.args['info'], col)
+	if request.args['type'] == 'conference':
+		final = getConference(request.args['info'], col)
+	if request.args['type'] == 'division':
+		final = getDivision(request.args['info'], col)
+	if request.args['type'] == 'position':
+		final = getPosition(request.args['info'], col)
+	return render_template("answer.html",
+							items = final)
+
 if __name__ == "__main__":
     app.debug = True
     app.run()
