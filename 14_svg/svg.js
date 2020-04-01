@@ -24,32 +24,32 @@ var draw = function(e) {
     balls.push(c);
   }
 
-  // else {
-  //   if (e.target.getAttribute("fill") == "blue") {
-  //     e.target.setAttribute("fill", "violet");
-  //   }
-  //   else {
-  //     var xval = e.target.getAttribute("cx");
-  //     var yval = e.target.getAttribute("cy");
-  //     svg.removeChild(e.target)
-  //     for (i = 0; i < balls.length; i++) {
-  //         if (balls[i].getAttribute("cx") == xval && balls[i].getAttribute("cy") == yval) {
-  //           balls.splice(i, 1);
-  //         }
-  //
-  //     }
-  //     var c = document.createElementNS("http://www.w3.org/2000/svg", "circle");
-  //     var x = Math.floor(Math.random() * 500);
-  //     var y = Math.floor(Math.random() * 500);
-  //     c.setAttribute("cx", x);
-  //     c.setAttribute("cy", y);
-  //     c.setAttribute("r", "10");
-  //     c.setAttribute("fill", "blue");
-  //     c.setAttribute("stroke", "black");
-  //     svg.appendChild(c);
-  //     balls.push(c);
-  //   }
-  // }
+  else {
+    if (e.target.getAttribute("fill") == "blue") {
+      e.target.setAttribute("fill", "violet");
+    }
+    else {
+      var xval = e.target.getAttribute("cx");
+      var yval = e.target.getAttribute("cy");
+      svg.removeChild(e.target)
+      for (i = 0; i < balls.length; i++) {
+          if (balls[i].getAttribute("cx") == xval && balls[i].getAttribute("cy") == yval) {
+            balls.splice(i, 1);
+          }
+
+      }
+      var c = document.createElementNS("http://www.w3.org/2000/svg", "circle");
+      var x = Math.floor(Math.random() * 500);
+      var y = Math.floor(Math.random() * 500);
+      c.setAttribute("cx", x);
+      c.setAttribute("cy", y);
+      c.setAttribute("r", "10");
+      c.setAttribute("fill", "blue");
+      c.setAttribute("stroke", "black");
+      svg.appendChild(c);
+      balls.push(c);
+    }
+  }
   console.log(balls);
 }
 
