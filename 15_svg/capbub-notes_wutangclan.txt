@@ -1,0 +1,26 @@
+Jackson Zou
+Softdev pd9
+K15 -- Capture Bubble Toil Trouble
+2020-04-01
+
+1:
+Clicking item brings up a pop-up that shows the name of the table item
+Clicking border doesn't do anything
+In the js, this refers back to either the mouse click or the item in the table
+You can loop through the items in the table with a for loop
+
+2:
+All of them make calls to getElementsByTagName but only the table one requires you to look at the 0 element of the list, meaning the other ones only return one element
+td is each element
+tr is each row of elements
+table is table
+
+3:
+only a true was added
+true brings that event listener to the front
+stopPropagation stops the event from triggering anything else
+
+4:
+uh oh, now they're all true
+the order that they're attached does not matter, it goes from the root to the branches if they're all true
+stopPropagation does its job again
