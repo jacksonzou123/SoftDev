@@ -1,0 +1,35 @@
+Zoulin
+Jackson Zou and Jeff Lin
+SoftDev2 pd9
+2020-04-07
+K17 - Deeper into D3
+
+d refers to data in an array, when you're trying to use it in a function, and have it run once for reach element
+
+Why does this code have two parameters, but only use one
+    d3.selectAll("p").style("color", function(d, i) {
+      return i % 2 ? "#fff" : "#eee";
+    });
+
+no need to use loops in d3
+
+    selection.node()
+will return the element, allowing it to be displayed
+
+if you chain, you can call multiple operations on a selection at once, because the return value of the operation is the selection
+otherwise you need to set a variable equal to it first, and then call the methods
+
+data join is the general pattern for creating, updating, or destroying elements to reflect new data
+
+selection.data computes enter, update, and exit selections (gets the new data?)
+selection.join applies default logic for each, appending entering elements and removing exiting elements (does stuff with the new data?)
+selection.attr or selection.style changes properties of the selection
+
+can get data from files with
+    FileAttachment {name: [name]}
+
+d3 has no type inferencing
+
+in the dynamic example, what is x do in the function
+
+if height is set to 200, why does it go above, what does it actually do
