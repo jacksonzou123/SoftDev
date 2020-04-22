@@ -111,5 +111,21 @@ function update(data) {
     index += 1
 }
 
-update(datasets[0])
-var gogo = setInterval(function() { update(datasets[index]) }, 2000)
+var renderB = document.getElementById("render");
+var transitionB = document.getElementById("transition");
+
+renderB.addEventListener('click', render);
+transitionB.addEventListener('click', transition);
+
+function render() {
+  update(datasets[0]);
+  index = 0;
+}
+
+function transition() {
+  update(datasets[index])
+  if (index == datasets.length) {
+    index = 0;
+  }
+}
+//var gogo = setInterval(function() { update(datasets[index]) }, 2000)
