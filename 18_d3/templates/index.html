@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>NYC Leading Causes of Death</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+</head>
+<body style="padding: 20px">
+    <h2>NYC Leading Causes of Death</h2>
+
+    <div class="text-center" id="stuff" style="margin: 40px 0px 40px 0px;">
+        <h3 id="year"></h3>
+        <div id="pie"></div>
+        <div>
+            <svg id="key" height=300 width=450></svg>
+        </div>
+    </div>
+
+    <p id="info"> {{info}} </p>
+
+    <footer><a href="https://catalog.data.gov/dataset/new-york-city-leading-causes-of-death-ce97f">Original Dataset</a></footer>
+
+    <script src="https://d3js.org/d3.v5.min.js"></script>
+    <script src="https://d3js.org/d3-scale-chromatic.v1.min.js"></script>
+    <script type=text/javascript src="{{
+        url_for('static', filename='script.js') }}"></script>
+
+    </script>
+</body>
+</html>
